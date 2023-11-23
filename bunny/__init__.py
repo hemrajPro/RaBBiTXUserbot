@@ -1,7 +1,6 @@
 from pyrogram import Client
 from config import *
 from pyrogram import idle
-from config import 
 import sys
 import os
 
