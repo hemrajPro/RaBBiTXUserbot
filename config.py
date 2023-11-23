@@ -1,7 +1,5 @@
 from os import getenv
-from dotenv import load_dotenv
 
-load_dotenv()
 
 # necessary api_ids 
 API_ID = int(getenv("API_ID", None))
