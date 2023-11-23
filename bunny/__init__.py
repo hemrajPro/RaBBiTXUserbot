@@ -16,5 +16,5 @@ bot = Client(":bunny:",
                api_id=API_ID,
                api_hash=API_HASH, 
                session_string=BOT_TOKEN,
-               plugins = dict(root="RaBBiTX/modules")
+               plugins = dict(root="bunny/modules")
             )
