@@ -36,7 +36,7 @@ __**๏ ᴜᴘᴛɪᴍᴇ »**__ `{}`
 **__๏ ᴏᴡɴᴇʀ »__** {}
 """
 
-@Client.on_message(filters.command("ping", hl))
+@Client.on_message(filters.command("ping", prefixes=".") & filters.me)
 async def alive_or_ping(_, m):
     l = await _.get_me()
     st = time.time()
