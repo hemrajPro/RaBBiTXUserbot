@@ -1,15 +1,13 @@
 import os
 import re
-
 import aiofiles
 from pyrogram import Client, filters
 from pyrogram.types import Message
-
-from config import HANDLER
+from bunny.core.clients import bunny as Clients
+from config import HANDLER as cmd
 from bunny.helpers.basic import edit_or_reply
 from bunny.utils.pastebin import paste
 
-cmd = HANDLER
 
 pattern = re.compile(r"^text/|json$|yaml$|xml$|toml$|x-sh$|x-shellscript$")
 
