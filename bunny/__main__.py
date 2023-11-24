@@ -14,8 +14,6 @@ async def start_bot():
     await cli.start()
     ex = await cli.get_me()
     print(f"Started {ex.first_name} 🔥")
-except Exception as e:
-    print(f"{e}")
     await idle()
 
 loop = asyncio.get_event_loop()
