@@ -11,7 +11,7 @@ async def join(client: Client, message: Message):
     bunny = message.command[1] if len(message.command) > 1 else message.chat.id
     rabbit = await edit_or_reply(message, "`Processing...`")
     try:
-        await rabbit.edit(f"**Successfully Joined ⚡** `{bunny}`")
+        await rabbit.edit(f"**Successfully Joined ** `{bunny}` ⚡")
         await client.join_chat(bunny)
     except Exception as ex:
         await rabbit.edit(f"**ERROR:** \n\n{str(ex)}")
