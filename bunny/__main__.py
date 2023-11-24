@@ -19,7 +19,7 @@ async def start_user():
     except:
       pass
     try:
-     await bunny.send_message(-1001901276605, "яαввιтχ υѕєявσт ѕтαятє∂ ѕυ¢¢єѕѕfυℓℓу")
+     await bunny.send_message(-1001901276605, "__**ѕтαятє∂ !!**__")
     except:
       pass
     await idle()
