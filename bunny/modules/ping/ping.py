@@ -46,7 +46,7 @@ async def alive_or_ping(_, m):
     upt = get_uptime(time.time())
     pong = str((end-st)*1000)[0:5]
     gtr = grt(int(time.time()-startTime))
-    return await message.edit(TEXT.format(pong, upt, men))
+    return await m.edit(TEXT.format(pong, upt, men))
         
 @Client.on_message(filters.command("iping", prefixes=".") & filters.me)
 async def ping(client, message):
