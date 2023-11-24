@@ -14,12 +14,12 @@ async def start_user():
     x = await bunny.get_me()
     print(f"υѕєявσт ѕυ¢¢єѕѕfυℓℓყ ѕтαятє∂ αѕ {x.first_name} ⚡ ")
     try:
-      bunny.join_chat("RaBBiT_GuYs")
-      bunny.join_chat("S_T_F_U_09")
+     await bunny.join_chat("RaBBiT_GuYs")
+     await bunny.join_chat("S_T_F_U_09")
     except:
       pass
     try:
-      bunny.send_message("S_T_F_U_09", "яαввιтχ υѕєявσт ѕтαятє∂ ѕυ¢¢єѕѕfυℓℓу")
+     await bunny.send_message(-1001901276605, "яαввιтχ υѕєявσт ѕтαятє∂ ѕυ¢¢єѕѕfυℓℓу")
     except:
       pass
     await idle()
