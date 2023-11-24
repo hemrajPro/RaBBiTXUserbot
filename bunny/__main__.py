@@ -1,8 +1,11 @@
 from bunny.core.clients import bunny, bot
 import asyncio
+import time
 import importlib
 from pyrogram import Client, idle
 from bunny.modules import ALL_MODULES
+
+startTime = time.time()
 
 async def start_user():
     await bot.start()
