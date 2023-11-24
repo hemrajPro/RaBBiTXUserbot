@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
-from bunny import user as Client
+from bunny import bot as Client
 
-@Client.on_message(filters.command("ping", prefixes=".") & filters.me)
-async def ping(client, message):
-    await message.edit("Pong!")
+@Client.on_message(filters.command("ping", prefixes="/"))
+async def ping(_, message):
+    await message.reply_text("Pong!")
