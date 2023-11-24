@@ -4,13 +4,12 @@ from pyrogram import idle
 import sys
 import os
 
-bot = Client(
-    name="app",
+ bot = Client(
+    name="bunny",
     api_id=API_ID,
     api_hash=API_HASH,
     bot_token=BOT_TOKEN,
-    plugins=dict(root="bunny/modules/bot"),
     in_memory=True,
 )
 
-user = Client(name="one", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION, plugins=dict(root="bunny/modules"))
+bunny = Client(name="bunny", api_id=API_ID, api_hash=API_HASH, session_string=STRING_SESSION)
