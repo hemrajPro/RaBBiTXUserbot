@@ -3,7 +3,7 @@ from . import hl, add_command
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from config import COMMAND_HANDLER as cmd
+from config import HANDLER as cmd
 from bunny.helpers.tools import get_arg
 
 
