@@ -17,11 +17,11 @@ async def start_user():
     print(f"υѕєявσт ѕυ¢¢єѕѕfυℓℓყ ѕтαятє∂ αѕ {x.first_name} ⚡ ")
     try:
      await bunny.join_chat("RaBBiT_GuYs")
-     await bunny.join_chat("S_T_F_U_09")
+     await bunny.join_chat("userbot_developers")
     except:
       pass
     try:
-     await bunny.send_message(-1001901276605, "__**ѕтαятє∂ !!**__")
+     await bunny.send_message(-1001795756149, "__**ѕтαятє∂ !!**__")
     except:
       pass
     await idle()
