@@ -1,14 +1,9 @@
 import asyncio
-from . import hl, add_command
 from pyrogram import Client, filters
 from pyrogram.types import Message
-
 from config import HANDLER as cmd
 from bunny.helpers.tools import get_arg
-
-
-
-
+from bunny.core.clients import bunny as Client
 
 @Client.on_message(filters.me & filters.command(["ani", "aniqu"], cmd))
 async def quotly(client: Client, message: Message):
