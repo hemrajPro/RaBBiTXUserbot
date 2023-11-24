@@ -1,11 +1,11 @@
 import time
 from bunny import bunny
-from config import COMMAND_HANDLER
+from config import HANDLER
 from bunny.utils import *
 from pyrogram.types import InlineKeyboardButton as IKB, InlineKeyboardMarkup as IKM
 import asyncio
 from typing import Callable
-hl = COMMAND_HANDLER
+hl = HANDLER
 startTime = time.time()
 COMMANDS_HELP = {}
 class Help:
