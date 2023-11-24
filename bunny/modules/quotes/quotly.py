@@ -9,10 +9,10 @@ from bunny.core.clients import bunny as Client
 async def quotly(client: Client, message: Message):
     args = get_arg(message)
     if not message.reply_to_message and not args:
-        return await message.edit("**__ᴘʟᴇᴀsᴇ ʀᴇᴘʟʏ ᴛᴏ ᴛʜᴇ ᴍᴇssᴀɢᴇ__.**")
+        return await message.edit("**__ᴘʟᴇᴀsᴇ ʀᴇᴘʟʏ ᴛᴏ ᴛʜᴇ ᴍᴇssᴀɢᴇ__ !!**")
     bot = "QuotLyBot"
     if message.reply_to_message:
-        await message.edit("`**__ᴍᴀᴋɪɴɢ ᴀ ǫᴜᴏᴛᴇ...__**`")
+        await message.edit("**__ᴍᴀᴋɪɴɢ ᴀ ǫᴜᴏᴛᴇ...__**")
         await client.unblock_user(bot)
         if args:
             await client.send_message(bot, f"/qcolor {args}")
@@ -31,4 +31,4 @@ async def quotly(client: Client, message: Message):
                     else None,
                 )
             else:
-                return await message.edit("**__ғᴀɪʟᴇᴅ ᴛᴏ ᴍᴀᴋᴇ sᴛɪᴄᴋᴇʀ ǫᴜᴏᴛʟʏ...__**")
+                return await message.edit("**__ғᴀɪʟᴇᴅ ᴛᴏ ᴍᴀᴋᴇ sᴛɪᴄᴋᴇʀ ǫᴜᴏᴛʟʏ...__!!**")
