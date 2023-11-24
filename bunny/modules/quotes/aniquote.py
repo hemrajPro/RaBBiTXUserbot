@@ -12,7 +12,7 @@ async def quotly(client: Client, message: Message):
         return await message.edit("**__ᴘʟᴇᴀsᴇ ʀᴇᴘʟʏ ᴛᴏ ᴛʜᴇ ᴍᴇssᴀɢᴇ...__!!**")
     bot = "QuotAfBot"
     if message.reply_to_message:
-        await message.edit("**__ᴍᴀᴋɪɴɢ ᴀɴɪᴍᴀᴛᴇᴅ ǫᴜᴏᴛᴇ...**__")
+        await message.edit("`ᴍᴀᴋɪɴɢ ᴀɴɪᴍᴀᴛᴇᴅ ǫᴜᴏᴛᴇ...`")
         await client.unblock_user(bot)
         if args:
             await client.send_message(bot, f"/qcolor {args}")
