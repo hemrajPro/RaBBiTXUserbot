@@ -1,5 +1,4 @@
-from bunny import bunny
-from bunny import bot 
+from bunny.core import bunny, bot
 import asyncio
 import importlib
 from pyrogram import Client, idle
