@@ -28,26 +28,21 @@ def grt(seconds: int) -> str:
     ping_time += ":".join(time_list)
     return ping_time
 
-TEXT = """
-•─────────────•
-            __𝗣𝗢𝗡𝗚 __          
-•─────────────•
+PING = """
+__𝗣𝗢𝗡𝗚 __
+
 __**๏ ᴘɪɴɢ »**__ `{}`
 __**๏ ᴜᴘᴛɪᴍᴇ »**__ `{}`
 **__๏ ᴏᴡɴᴇʀ »__** {}
 """
 
 @Client.on_message(filters.command("ping", prefixes=".") & filters.me)
-async def alive_or_ping(_, m):
-    l = await _.get_me()
+async def ping(_, m):
+    x = await _.get_me()
     st = time.time()
     end = time.time()
-    men = l.mention
+    user = x.mention
     upt = get_uptime(time.time())
     pong = str((end-st)*1000)[0:5]
     gtr = grt(int(time.time()-startTime))
-    return await m.edit(TEXT.format(pong, upt, men))
-        
-@Client.on_message(filters.command("iping", prefixes=".") & filters.me)
-async def ping(client, message):
-    await message.edit("Pong!")
+    return await m.edit(PING.format(pong, upt, user))
