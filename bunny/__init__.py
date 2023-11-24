@@ -1,16 +1,26 @@
-from bunny.core.clients import bunny, bot
+from config import *
+import sys
 import asyncio
-import importlib
 from pyrogram import Client, idle
-from bunny.modules import ALL_MODULES
 
-async def start_user():
-    await bot.start()
-    print("[•bunny•]: єνєяутнιиg ιѕ σк, ѕтαятιиg... уσυя υѕєявσт ρℓєαѕє ωαιт... ⚡")
-    for all_module in ALL_MODULES:
-        importlib.import_module("bunny.modules" + all_module)
-        print(f"[•bunny•] ѕυ¢¢єѕѕfυℓℓу ιмρσятє∂ {all_module} ⚡")
-    await bunny.start()
-    x = await bunny.get_me()
-    print(f"υѕєявσт ѕυ¢¢єѕѕfυℓℓყ ѕтαятє∂ αѕ {x.first_name} ⚡ ")
-    await idle()
+x = False
+
+if not API_ID:
+  print("API_ID not found please check again... ⚡")
+  x = True
+
+if not API_HASH:
+  print("API_HASH not found please check again... ⚡")
+  x = True
+
+if not BOT_TOKEN:
+  print("BOT_TOKEN not found please check again... ⚡")
+  x = True
+  
+if not STRING_SESSION:
+  print("STRING_SESSION not found please check again.... ⚡")
+  x = True
+  
+if not MONGO_DB_URI:
+  print("MONGO_DB_URI nit found please check again... ⚡")
+  x = True
