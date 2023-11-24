@@ -5,11 +5,11 @@ import aiofiles
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
-from config import COMMAND_HANDLER
+from config import HANDLER
 from bunny.helpers.basic import edit_or_reply
 from bunny.utils.pastebin import paste
 
-cmd = COMMAND_HANDLER
+cmd = HANDLER
 
 pattern = re.compile(r"^text/|json$|yaml$|xml$|toml$|x-sh$|x-shellscript$")
 
