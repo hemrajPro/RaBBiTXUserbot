@@ -1,5 +1,5 @@
 import time
-from bunny import bunny
+from bunny.core.clients import bunny
 from config import HANDLER
 from bunny.utils import *
 from pyrogram.types import InlineKeyboardButton as IKB, InlineKeyboardMarkup as IKM
@@ -89,7 +89,7 @@ def build_help_markup(set):
     return final
 async def load_info():
     global me
-    me = await BUNNY.get_me()
+    me = await bunny.get_me()
 async def my_info():
     return me
 async def main():
