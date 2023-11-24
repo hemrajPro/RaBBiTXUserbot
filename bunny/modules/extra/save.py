@@ -2,7 +2,7 @@ from pyrogram import *
 from pyrogram import filters
 from pyrogram.types import *
 from config import HANDLER as cmd
-
+from bunny.core.clients import bunny as Client
 
 @Client.on_message(filters.command(["save"], cmd) & filters.me)
 async def save_message(client: Client, message: Message):
@@ -20,7 +20,3 @@ async def forward_saved_message(client: Client, message: Message):
         await saved_message.forward(message.chat.id)
     else:
         await message.edit_text("No message saved.")
-
-@Client.on_message(filters.command(["save"], cmd) & filters.me)
-async def remind_user_to_reply(client: Client, message: Message):
-    await message.edit_text("Please reply to a message to save it.")
