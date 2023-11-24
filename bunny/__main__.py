@@ -27,7 +27,7 @@ if not MONGO_DB_URI:
   print("MONGO_DB_URI nit found please check again... ⚡")
   x = True
 
-if ex:
+if x:
   sys.exit()
   
 try:
