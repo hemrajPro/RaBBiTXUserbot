@@ -7,6 +7,13 @@ from bunny.modules import ALL_MODULES
 
 startTime = time.time()
 
+def get_uptime(x):
+    z = get_readable_time(int(x-startTime))
+    return z
+
+grt = get_readable_time
+
+
 async def start_user():
     await bot.start()
     print("[•bunny•]: єνєяутнιиg ιѕ σк, ѕтαятιиg... уσυя υѕєявσт ρℓєαѕє ωαιт... ⚡")
