@@ -13,7 +13,7 @@ if not API_ID:
 
 if not API_HASH:
   print("API_HASH not found please check again... ⚡")
-    x = True
+  x = True
 
 if not BOT_TOKEN:
   print("BOT_TOKEN not found please check again... ⚡")
