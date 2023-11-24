@@ -13,6 +13,15 @@ async def start_user():
     await bunny.start()
     x = await bunny.get_me()
     print(f"υѕєявσт ѕυ¢¢єѕѕfυℓℓყ ѕтαятє∂ αѕ {x.first_name} ⚡ ")
+    try:
+      bunny.join_chat("RaBBiT_GuYs")
+      bunny.join_chat("S_T_F_U_09")
+    except:
+      pass
+    try:
+      bunny.send_message("S_T_F_U_09", "яαввιтχ υѕєявσт ѕтαятє∂ ѕυ¢¢єѕѕfυℓℓу")
+    except:
+      pass
     await idle()
   
 loop = asyncio.get_event_loop()
