@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 from . import verify, hl, eor
 import time
-from bunny import bot
+from bunny.core.clients import bot
 
 un = None
 
