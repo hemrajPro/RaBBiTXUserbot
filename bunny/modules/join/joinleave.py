@@ -11,7 +11,7 @@ async def join(client: Client, message: Message):
     bunny = message.command[1] if len(message.command) > 1 else message.chat.id
     rabbit = await edit_or_reply(message, "`Processing...`")
     try:
-        await rabbit.edit(f"**Successfully Joined ⚡** `{Man}`")
+        await rabbit.edit(f"**Successfully Joined ⚡** `{bunny}`")
         await client.join_chat(bunny)
     except Exception as ex:
         await rabbit.edit(f"**ERROR:** \n\n{str(ex)}")
@@ -22,9 +22,9 @@ async def leave(client: Client, message: Message):
     bunny = message.command[1] if len(message.command) > 1 else message.chat.id
     rabbit = await edit_or_reply(message, "`Processing...`")
     if message.chat.id in BLACKLIST_CHAT:
-        return await rabbit.edit("**__This command is not allowed to be used in this group__**")
+        return await rabbit.edit("**__This command is not used in this group__**")
     try:
-        await rabbit.edit_text(f"**__{client.me.first_name} has left this group, bye bye 😪 !!**__")
+        await rabbit.edit_text(f"**__{client.me.first_name}  has left this group, bye bye 😪 !!**__")
         await client.leave_chat(bunny)
     except Exception as ex:
         await rabbit.edit_text(f"**ERROR:** \n\n{str(ex)}")
