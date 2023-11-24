@@ -3,6 +3,7 @@ from pyrogram.types import Message
 from config import BLACKLIST_CHAT
 from config import HANDLER as cmd
 from bunny.helpers.basic import edit_or_reply
+from bunny.core.clients import bunny as Client
 
 
 @Client.on_message(filters.command("join", cmd) & filters.me)
