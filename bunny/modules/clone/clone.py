@@ -5,15 +5,16 @@ import os
 from bunny.core.clients import bunny as Client
 from bunny.helpers.tools import get_arg
 
+
 @Client.on_message(filters.command("clone", hl))
 async def cloner(_, m):
     try:
-        id, args = await get_args(_, m)
+        id, args = await get_arg(_, m)
     except:
         return await eor(m, "Invalid User.")
     if not await details_exist():
-        return await eor(m, f"Save your current details first by using ' `{hl}save` ', when you use revert, current details will be applied.")
-    ok = await eor(m, "cloning...")
+        return await massage.edit(m, f"Save your current details first by using ' `{hl}save` ', when you use revert, current details will be applied.")
+    ok = await mssage.edit(m, "cloning...")
     user = await _.get_chat(id)
     dps = []
     async for y in _.get_chat_photos(id):
@@ -27,16 +28,16 @@ async def cloner(_, m):
     dp = await x.download()
     await x.delete()
     try:
-        await Client.set_profile_photo(photo=dp)
+        await _.set_profile_photo(photo=dp)
     except:
-        await Client.set_profile_photo(video=dp)
-    await _.update_prClient.set_profile_photorst_name, last_name=user.last_name if user.last_name else "", bio=bio)
+        await _.set_profile_photo(video=dp)
+    await _.update_profile(first_name=user.first_name, last_name=user.last_name if user.last_name else "", bio=bio)
     await ok.edit("Cloned successfully ✅")
     os.remove(dp)
     
 @Client.on_message(filters.command("save", hl))
 async def save(_, m):
-    me = await Client.get_chat((await my_info()).id)
+    me = await _.get_chat((await my_info()).id)
     try:
         dps = []
         async for y in _.get_chat_photos(me.id):
@@ -46,13 +47,11 @@ async def save(_, m):
         dp_id = None
     details = {"first_name": me.first_name, "last_name": me.last_name if me.last_name else "", "bio": me.bio if me.bio else "", "file_id": dp_id}
     await save_details(details)
-    await eor(m, "details saved successfully ✅")
+    await message.edit(m, "details saved successfully ✅")
 
 @Client.on_message(filters.command("revert", hl))
 async def revert(_, m):
-    if not await verify(_, m):
-        return
-    ok = await eor(m, "Reverting back...")
+    ok = await message.edit(m, "Reverting back...")
     details = await get_details()
     if details["file_id"]:
         x = await _.send_photo("me", details["file_id"])
