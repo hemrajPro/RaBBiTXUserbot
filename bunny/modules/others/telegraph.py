@@ -4,6 +4,7 @@ from telegraph import Telegraph, exceptions, upload_file
 from config import HANDLER as hl
 from bunny.helpers.basic import edit_or_reply, get_text
 from bunny.helpers.tools import *
+from bunny.core.clients import bunny as Client
 
 telegraph = Telegraph()
 r = telegraph.create_account(short_name="PyroMan-Userbot")
