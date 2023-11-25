@@ -16,7 +16,7 @@ async def uptotelegraph(client: Client, message: Message):
     bunny = await edit_or_reply(message, "`ρɾσƈҽʂʂιɳɠ...⚡`")
     if not message.reply_to_message:
         await bunny.edit(
-            "**reply to the message, to get a link from Telegraph...**"
+            "**__reply to the message, to get a link from Telegraph....__**"
         )
         return
     if message.reply_to_message.media:
