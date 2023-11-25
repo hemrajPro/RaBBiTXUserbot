@@ -11,7 +11,7 @@ from pyrogram.types import Message
 from config import HANDLER as hl
 from bunny.helpers.basic import edit_or_reply
 from bunny.helpers.tools import get_arg
-
+from bunny.core.clients import bunny as Client
 
 
 async def get_group_call(
