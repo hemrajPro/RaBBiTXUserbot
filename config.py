@@ -1,4 +1,5 @@
 from os import getenv
+import os
 
 # API_IDS ~ my.telegram.org
 API_ID = int(getenv("API_ID", None)) # API_ID get it from my.telegram.org
@@ -24,6 +25,10 @@ if not ALIVE_PIC:
     
 HELP_PIC = getenv("HELP_PIC", None) # HELP_PIC a pic link for help commad in bot
 
-BLACKLIST_CHAT = getenv("BLACKLIST_CHAT", None)
+# BLACKLISTED CHATS 
+BLACKLIST_CHAT = getenv("BLACKLIST_CHAT", None) # BLACKLISTED CHATS your telegram group id ( not necessary )
 if not BLACKLIST_CHAT:
     BLACKLIST_CHAT = [-1001901276605]
+
+# BIO ~ any message in any font for bio ( not necessary )
+BIO = os.environ.get("BIO", "〆 яαввιтχ υѕєявσт υѕєя 〆") # BIO for clone and revert cmd 
