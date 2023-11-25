@@ -11,10 +11,10 @@ async def cloner(_, m):
     try:
         id, args = await get_arg(_, m)
     except:
-        return await message.edit(m, "Invalid User.")
+        return await m.edit(m, "Invalid User.")
     if not await details_exist():
-        return await massage.edit(m, f"Save your current details first by using ' `{hl}save` ', when you use revert, current details will be applied.")
-    ok = await mssage.edit(m, "cloning...")
+        return await m.edit(m, f"Save your current details first by using ' `{hl}save` ', when you use revert, current details will be applied.")
+    ok = await m.edit(m, "cloning...")
     user = await _.get_chat(id)
     dps = []
     async for y in _.get_chat_photos(id):
@@ -47,11 +47,11 @@ async def save(_, m):
         dp_id = None
     details = {"first_name": me.first_name, "last_name": me.last_name if me.last_name else "", "bio": me.bio if me.bio else "", "file_id": dp_id}
     await save_details(details)
-    await message.edit(m, "details saved successfully ✅")
+    await m.edit(m, "details saved successfully ✅")
 
 @Client.on_message(filters.command("revert", hl))
 async def revert(_, m):
-    ok = await message.edit(m, "Reverting back...")
+    ok = await m.edit(m, "Reverting back...")
     details = await get_details()
     if details["file_id"]:
         x = await _.send_photo("me", details["file_id"])
