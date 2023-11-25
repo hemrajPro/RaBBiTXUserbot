@@ -11,7 +11,7 @@ async def cloner(_, m):
     try:
         id, args = await get_arg(_, m)
     except:
-        return await eor(m, "Invalid User.")
+        return await message.edit(m, "Invalid User.")
     if not await details_exist():
         return await massage.edit(m, f"Save your current details first by using ' `{hl}save` ', when you use revert, current details will be applied.")
     ok = await mssage.edit(m, "cloning...")
