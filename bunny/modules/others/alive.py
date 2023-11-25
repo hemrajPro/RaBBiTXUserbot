@@ -9,8 +9,7 @@ import random
 from pyrogram import __version__ as py_version
 version = "v1.0"
 from platform import python_version
-
-IMG = "https://telegra.ph/file/5306c821ea3b7bf25919f.jpg"
+from config import ALIVE_PIC
 
 aliver = """
 ╭────────────────๏
@@ -37,4 +36,4 @@ async def alive(client: Client, message: Message):
     await message.edit("`gєттιиg вσт ∂єтαιℓѕ...⚡`")
     await asyncio.sleep(0.3)
     await message.delete()
-    await message.reply_photo(IMG, caption=aliver.format(user, py_version, version, python_version(), upt)) 
+    await message.reply_photo(ALIVE_PIC, caption=aliver.format(user, py_version, version, python_version(), upt)) 
