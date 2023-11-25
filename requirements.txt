@@ -7,6 +7,7 @@ telegraph
 gTTS
 opencv-python-headless
 requests
+googlesearch-python==1.0.1
 bs4
 aiohttp
 aiofiles
