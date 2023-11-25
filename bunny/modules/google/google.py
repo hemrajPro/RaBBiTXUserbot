@@ -37,7 +37,7 @@ async def google(client: Client, message: Message):
     if " " in msg_txt:
         query = msg_txt[msg_txt.index(" ") + 1 : len(msg_txt)]
     else:
-        await bunny.edit("**__give a query to search__**")
+        await bunny.edit("**__give a query to search...__**")
         return
     results = googlesearch(query)
     for i in range(1, 10, 1):
