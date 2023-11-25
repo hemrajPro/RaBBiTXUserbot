@@ -8,7 +8,7 @@ from bunny.core.clients import bunny as Client
 
 OWNER = os.environ.get("OWNER", None)
 
-@Client.on_message(filters.command("clone", cmd) & filters.me)
+@Client.on_message(filters.command("clone", hl) & filters.me)
 async def clone(client: Client, message: Message):
     text = get_text(message)
     bunny = await edit_or_reply(message, "`ƈℓσиιиg...⚡`")
