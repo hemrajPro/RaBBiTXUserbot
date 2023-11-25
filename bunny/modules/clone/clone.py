@@ -3,13 +3,12 @@ from pyrogram import Client, filters
 from bunny.Database.clonedb import *
 import os
 from bunny.core.clients import bunny as Client
+from bunny.helpers.tools import get_arg
 
 @Client.on_message(filters.command("clone", hl))
 async def cloner(_, m):
-    if not await verify(_, m):
-        return
     try:
-        id, args = await get_id_and_args(_, m)
+        id, args = await get_args(_, m)
     except:
         return await eor(m, "Invalid User.")
     if not await details_exist():
@@ -28,18 +27,16 @@ async def cloner(_, m):
     dp = await x.download()
     await x.delete()
     try:
-        await _.set_profile_photo(photo=dp)
+        await Client.set_profile_photo(photo=dp)
     except:
-        await _.set_profile_photo(video=dp)
-    await _.update_profile(first_name=user.first_name, last_name=user.last_name if user.last_name else "", bio=bio)
+        await Client.set_profile_photo(video=dp)
+    await _.update_prClient.set_profile_photorst_name, last_name=user.last_name if user.last_name else "", bio=bio)
     await ok.edit("Cloned successfully ✅")
     os.remove(dp)
     
 @Client.on_message(filters.command("save", hl))
 async def save(_, m):
-    if not await verify(_, m):
-        return
-    me = await _.get_chat((await my_info()).id)
+    me = await Client.get_chat((await my_info()).id)
     try:
         dps = []
         async for y in _.get_chat_photos(me.id):
