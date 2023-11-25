@@ -32,7 +32,7 @@ async def clone(client: Client, message: Message):
     await message.edit(f"**__successfully cloned as__** __{f_name}__")
 
 
-@Client.on_message(filters.command("revert", cmd) & filters.me)
+@Client.on_message(filters.command("revert", hl) & filters.me)
 async def revert(client: Client, message: Message):
     await message.edit("`яєνєятιиg...`")
     r_bio = BIO
