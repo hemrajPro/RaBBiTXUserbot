@@ -30,7 +30,7 @@ aliver = """
 async def alive(client: Client, message: Message):
     await message.edit("`ρяσƈҽʂʂιɳɠ....`")
     await asyncio.sleep(0.3)
-    user = (await _.get_me()).mention
+    user = (await Client.get_me()).mention
     upt = get_uptime(time.time())
     await message.edit("`яαввιтχ ιѕ αℓινє...⚡`")
     await asyncio.sleep(0.3)
