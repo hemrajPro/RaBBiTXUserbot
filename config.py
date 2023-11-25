@@ -19,6 +19,9 @@ HANDLER = getenv("HANDLER", None) # HANDLER choose your bot command handler
 
 # IMAGES ~ telegram link of pic
 ALIVE_PIC = getenv("ALIVE_PIC", None) # ALIVE_PIC a pic link for alive command in bot
+if not ALIVE_PIC:
+    ALIVE_PIC = "https://telegra.ph/file/5306c821ea3b7bf25919f.jpg"
+    
 HELP_PIC = getenv("HELP_PIC", None) # HELP_PIC a pic link for help commad in bot
 
 BLACKLIST_CHAT = getenv("BLACKLIST_CHAT", None)
